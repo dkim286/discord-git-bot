@@ -17,7 +17,7 @@ cd discord-git-bot
 python bot.py 
 ```
 
-Alternatively, you can set up a systemd unit file in `~/.config/systemd/user/default.target.wants/discordbot.service` to keep it running on a Raspberry Pi or something:
+Alternatively, you can set up a systemd unit file in `~/.config/systemd/user/discordbot.service` to keep it running on a Raspberry Pi or something:
 
 ```
 [Unit]
@@ -29,6 +29,11 @@ ExecStart=/user/bin/python /path/to/repository/bot.py
 
 [Install]
 WantedBy=default.target
+```
+
+```
+$ systemctl --user enable discordbot.service
+$ systemctl --user start discordbot.service 
 ```
 
 # Example Configuration 
