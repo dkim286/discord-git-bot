@@ -8,6 +8,28 @@ I swear I meant for this to be a simple Python script. I never intended to turn 
 
 ![bot](https://user-images.githubusercontent.com/61002244/124217692-4d5adb80-dae8-11eb-85b0-fd63157e2f2d.png)
 
+# Running 
+
+Configure it first. It's not gonna work out of the box. 
+
+```shell
+cd discord-git-bot
+python bot.py 
+```
+
+Alternatively, you can set up a systemd unit file in `~/.config/systemd/user/default.target.wants/discordbot.service` to keep it running on a Raspberry Pi or something:
+
+```
+[Unit]
+Description=Discord bot for a group project 
+
+[Service]
+WorkingDirectory=/path/to/repository
+ExecStart=/user/bin/python /path/to/repository/bot.py
+
+[Install]
+WantedBy=default.target
+```
 
 # Example Configuration 
 
