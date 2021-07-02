@@ -10,22 +10,22 @@ I swear I meant for this to be a simple Python script. I never intended to turn 
 
 # Running 
 
-Configure it first. It's not gonna work out of the box. 
+[Configure it first](#example-configuration). It's not gonna work out of the box. 
 
-```shell
-cd discord-git-bot
-python bot.py 
+```
+$ cd discord-git-bot
+$ python bot.py 
 ```
 
-Alternatively, you can set up a systemd unit file in `~/.config/systemd/user/discordbot.service` to keep it running on a Raspberry Pi or something:
+Alternatively, you can set up a systemd service (`~/.config/systemd/user/discordbot.service`) to keep it running on a Raspberry Pi or something:
 
 ```
 [Unit]
 Description=Discord bot for a group project 
 
 [Service]
-WorkingDirectory=/path/to/repository
-ExecStart=/user/bin/python /path/to/repository/bot.py
+WorkingDirectory=/path/to/bot/folder
+ExecStart=/user/bin/python /path/to/bot/folder/bot.py
 
 [Install]
 WantedBy=default.target
@@ -51,17 +51,17 @@ token = 111aabbbcc
 timezone = "America/Anchorage"
 ```
 
-## `bot` 
+`bot` 
 
 - `token`: Your Discord app token 
 - `channel`: Channel ID of the channel you want the bot to join (integer) 
 
-## `target` 
+`target` 
 
 - `repo`: Your repository's API URL
 - `token`: Your Github app token 
 
-## `other`
+`other`
 - `timezone`: Timezone
 
 
