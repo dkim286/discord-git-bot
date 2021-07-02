@@ -6,6 +6,7 @@ I swear I meant for this to be a simple Python script. I never intended to turn 
 
 # Bot in Action 
 
+![bot](https://user-images.githubusercontent.com/61002244/124217692-4d5adb80-dae8-11eb-85b0-fd63157e2f2d.png)
 
 
 # Example Configuration 
