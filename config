@@ -1,0 +1,10 @@
+[bot]
+token = YOURTOKENHERE
+channel = 1234
+
+[target]
+repo = "https://api.github.com/repos/USER/REPO"
+token = yourtokenhere
+
+[other]
+timezone = "America/Anchorage"
